@@ -20,7 +20,25 @@ import java.sql.SQLException;
 import java.util.Objects;
 
 public class StockPageController {
- @FXML
+    @FXML
+    static Connection conn = ControllerDataBase.getConnection();
+    @FXML
+    private TextField namaObat;
+    @FXML
+    private TextField banyakStock;
+
+    @FXML
+    public void addToData() throws SQLException {
+
+        String obat = namaObat.getText();
+        String banyak= banyakStock.getText();
+        PreparedStatement pstmt = conn.prepareStatement("UPDATE dtaobat SET stock = stock + " + banyak +" WHERE namaObat = ?");
+        pstmt.setString(1, obat);
+        pstmt.executeUpdate();
+
+    }
+
+    @FXML
     private void toFindPage(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(Objects.requireNonNull(getClass().getResource("/com/example/pasien page.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -29,5 +47,18 @@ public class StockPageController {
         stage.setScene(scene);
         stage.show();
 
-    }
+    }
+    @FXML
+    private Text tambahStock;
+
+    @FXML
+    private void initialize() {
+        tambahStock.setOnMouseEntered(event -> {
+            tambahStock.setFill(Color.DARKGREEN);
+        });
+
+        tambahStock.setOnMouseExited(event -> {
+            tambahStock.setFill(Color.GREEN);
+        });
+    }
 }
