@@ -33,4 +33,32 @@ public class HomePageController {
         stage.setScene(scene);
         stage.show();
 
-    }
+    }
+    @FXML
+    private ImageView cariObat;
+    @FXML
+    private ImageView tambahObat;
+
+    @FXML
+    private void initialize() {
+        cariObat.setOnMouseEntered(event -> {
+            cariObat.setImage(new Image("com/example/image/cari3.png"));
+        });
+        cariObat.setOnMouseExited(event -> {
+            cariObat.setImage(new Image("com/example/image/cari.png"));
+        });
+        cariObat.setOnMousePressed(event -> {
+            cariObat.setImage(new Image("com/example/image/cari2.png"));
+        });
+        tambahObat.setOnMouseEntered(event -> {
+            tambahObat.setImage(new Image("com/example/image/tambah3.png"));
+        });
+        tambahObat.setOnMouseExited(event -> {
+            tambahObat.setImage(new Image("com/example/image/tambah.png"));
+        });
+        tambahObat.setOnMousePressed(event -> {
+            tambahObat.setImage(new Image("com/example/image/tambah2.png"));
+        });
+
+    }
+}
