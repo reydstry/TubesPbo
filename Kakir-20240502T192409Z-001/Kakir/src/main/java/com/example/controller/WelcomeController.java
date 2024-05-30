@@ -26,3 +26,23 @@ public class WelcomeController {
         stage.setScene(scene);
         stage.show();
     }
+      @FXML
+    private Text Continue;
+
+    @FXML
+    private void initialize() {
+        Continue.setOnMouseEntered(event -> {
+            Continue.setFill(Color.LIGHTGREEN);
+        });
+
+        Continue.setOnMouseExited(event -> {
+            Continue.setFill(Color.GREEN);
+        });
+
+        Continue.setOnMousePressed(event -> {
+            Continue.setFill(Color.DARKGREEN);
+        });
+
+    }
+}
+
