@@ -9,34 +9,32 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.StockPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1136.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller.StockPageController">
    <children>
-      <ImageView fitHeight="446.0" fitWidth="626.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="810.0" fitWidth="1145.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@image/stock.png" />
          </image>
       </ImageView>
-      <TextField fx:id="namaObat" layoutX="194.0" layoutY="162.0" prefHeight="51.0" prefWidth="238.0" style="-fx-background-color: light green;">
+      <TextField fx:id="namaObat" layoutX="348.0" layoutY="273.0" prefHeight="95.0" prefWidth="434.0" style="-fx-background-color: light green;">
          <font>
-            <Font size="21.0" />
+            <Font size="35.0" />
          </font>
       </TextField>
-      <TextField fx:id="banyakStock" layoutX="194.0" layoutY="243.0" prefHeight="51.0" prefWidth="238.0" style="-fx-background-color: light green;">
+      <TextField fx:id="banyakStock" layoutX="348.0" layoutY="405.0" prefHeight="95.0" prefWidth="434.0" style="-fx-background-color: light green;">
          <font>
-            <Font size="21.0" />
+            <Font size="35.0" />
          </font>
       </TextField>
-      <Text fx:id="tambahStock" accessibleRole="BUTTON" fill="#009900" fontSmoothingType="LCD" layoutX="254.0" layoutY="301.0" onMouseClicked="#addToData" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah Obat" underline="true" wrappingWidth="117.63671875">
+      <Text fx:id="tambahStock" accessibleRole="BUTTON" fill="#009900" fontSmoothingType="LCD" layoutX="473.0" layoutY="558.0" onMouseClicked="#addToData" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah Obat" underline="true" wrappingWidth="189.13671875">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Text>
-      <Button blendMode="LIGHTEN" layoutX="525.0" layoutY="188.0" mnemonicParsing="false" onAction="#toFindPage" text="Button">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor></Button>
+      <Button layoutX="46.0" layoutY="36.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="51.0" prefWidth="82.0" text="Back" />
+      <Button layoutX="996.0" layoutY="43.0" mnemonicParsing="false" onAction="#toFindPage" prefHeight="51.0" prefWidth="82.0" text="Next" />
    </children>
 </AnchorPane>
