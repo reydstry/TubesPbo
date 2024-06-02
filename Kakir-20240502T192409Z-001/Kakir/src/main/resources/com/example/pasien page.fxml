@@ -18,38 +18,42 @@
             </image>
         </ImageView>
         <TextField fx:id="namaPasien" layoutX="43.0" layoutY="277.0" prefHeight="49.0" prefWidth="250.0">
-         <font>
-            <Font size="21.0" />
-         </font></TextField>
-        <TextField fx:id="umurPasien" layoutX="43.0" layoutY="403.0" prefHeight="49.0" prefWidth="250.0">
-         <font>
-            <Font size="21.0" />
-         </font></TextField>
-      <TextField fx:id="namaObat" layoutX="43.0" layoutY="513.0" prefHeight="49.0" prefWidth="250.0">
-         <font>
-            <Font size="21.0" />
-         </font></TextField>
-
+            <font>
+                <Font size="21.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="umurPasien" layoutX="43.0" layoutY="381.0" prefHeight="49.0" prefWidth="250.0">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="namaObat" layoutX="43.0" layoutY="489.0" prefHeight="49.0" prefWidth="250.0">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </TextField>
         <Label layoutX="47.0" layoutY="236.0" prefHeight="31.0" prefWidth="143.0" text="Nama Pasien">
             <font>
                 <Font size="21.0" />
-            </font></Label>
-        <Label layoutX="47.0" layoutY="354.0" text="Umur Pasien">
+            </font>
+        </Label>
+        <Label layoutX="43.0" layoutY="337.0" text="Umur Pasien">
             <font>
                 <Font size="21.0" />
-            </font></Label>
-      <Label layoutX="43.0" layoutY="471.0" text="Nama Obat">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
+            </font>
+        </Label>
+        <Label layoutX="42.0" layoutY="446.0" text="Nama Obat">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
         <TableView fx:id="tableObat" layoutX="391.0" layoutY="223.0" prefHeight="558.0" prefWidth="713.0">
             <columns>
                 <TableColumn fx:id="namaObatColumn" prefWidth="99.0" text="Nama Obat" />
-                <TableColumn fx:id="jenisObatcolumn" prefWidth="92.0" text="Jenis Obat" />
-                <TableColumn fx:id="dosisObatcolumn" prefWidth="117.0" text="Stock" />
-                <TableColumn fx:id="hargaObatcolumn" prefWidth="130.0" text="Harga" />
-                <TableColumn fx:id="Keluhancolumn" prefWidth="99.0" text="Keluhan" />
+                <TableColumn fx:id="jenisObatColumn" prefWidth="92.0" text="Jenis Obat" />
+                <TableColumn fx:id="dosisObatColumn" prefWidth="117.0" text="Stock" />
+                <TableColumn fx:id="hargaObatColumn" prefWidth="130.0" text="Harga" />
+                <TableColumn fx:id="keluhanColumn" prefWidth="99.0" text="Keluhan" />
             </columns>
             <columnResizePolicy>
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -58,13 +62,19 @@
         <Button layoutX="37.0" layoutY="732.0" mnemonicParsing="false" onAction="#toKasirPage" prefHeight="49.0" prefWidth="117.0" text="Kasir Page">
             <font>
                 <Font size="18.0" />
-            </font></Button>
-      <Button layoutX="21.0" layoutY="25.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="31.0" prefWidth="80.0" text="back">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Button>
-      <Button layoutX="1024.0" layoutY="25.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="80.0" text="next">
+            </font>
+        </Button>
+        <Button layoutX="21.0" layoutY="25.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="31.0" prefWidth="80.0" text="Back">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Button>
+        <Button layoutX="1024.0" layoutY="25.0" mnemonicParsing="false" onAction="#toKasirPage" prefHeight="45.0" prefWidth="80.0" text="Next">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Button>
+      <Button layoutX="47.0" layoutY="136.0" mnemonicParsing="false" onAction="#toCartPage" prefHeight="31.0" prefWidth="80.0" text="Cart">
          <font>
             <Font size="21.0" />
          </font>
