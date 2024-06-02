@@ -1,7 +1,6 @@
 package com.example.controller;
 
-import com.example.Database.ControllerDataBase;
-
+import com.example.Database.ControllerDataBaseObat;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -17,7 +16,8 @@ import java.sql.Connection;
 public class WelcomeController {
     @FXML
     private void toHomePage(MouseEvent event) throws IOException {
-        Connection connection = ControllerDataBase.getConnection();
+
+        Connection connection = ControllerDataBaseObat.getConnection();
         System.out.println(connection);
         Parent root = FXMLLoader.load(getClass().getResource("/com/example/main Hole.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -25,12 +25,13 @@ public class WelcomeController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
-      @FXML
+    }
+    @FXML
     private Text Continue;
 
     @FXML
     private void initialize() {
+
         Continue.setOnMouseEntered(event -> {
             Continue.setFill(Color.LIGHTGREEN);
         });
@@ -45,4 +46,3 @@ public class WelcomeController {
 
     }
 }
-
